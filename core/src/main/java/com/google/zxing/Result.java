@@ -16,6 +16,7 @@
 
 package com.google.zxing;
 
+import java.io.Serializable;
 import java.util.EnumMap;
 import java.util.Map;
 
@@ -24,8 +25,9 @@ import java.util.Map;
  *
  * @author Sean Owen
  */
-public final class Result {
+public final class Result implements Serializable{
 
+  private static final long serialVersionUID = -8034097026245266253L;
   private final String text;
   private final byte[] rawBytes;
   private ResultPoint[] resultPoints;
